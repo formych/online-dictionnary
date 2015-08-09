@@ -12,7 +12,7 @@
 		if (!$word)
 		{
 		    echo "请填写要查询的单词!<br/>";
-			echo "<a href='main.php' >返回继续</a>	";
+			echo "<a href='index.php' >返回继续</a>	";
 			exit();
 		}
 		$words = $xmldoc->getElementsByTagName("word");
@@ -33,7 +33,7 @@
 		{
 		    echo "没有查询到！<br/>";
 		}
-		echo "<a href='main.php' >返回继续</a>	";
+		echo "<a href='index.php' >返回继续</a>	";
 	}
 	else if ($type=="add")
 	{
@@ -43,7 +43,7 @@
 		if (!($add_en&&$add_cn))
 		{
      		echo "请输入要添加的英文单词和对应的中文!<br/>";
-			echo "<a href='main.php' >返回继续</a>	";
+			echo "<a href='index.php' >返回继续</a>	";
 			exit();
 		}
 		
@@ -69,7 +69,7 @@
 		}
 		else
 		    echo "添加失败!";
-		echo "<a href='main.php' >返回继续</a>	";
+		echo "<a href='index.php' >返回继续</a>	";
 	}
 	else if ($type=="delete")
 	{
@@ -77,7 +77,7 @@
 		if (!$del_en)
 		{
      		echo "请输入要删除的英文单词!<br/>";
-			echo "<a href='main.php' >返回继续</a>	";
+			echo "<a href='index.php' >返回继续</a>	";
 			exit();
 		}
 		$flag = false;
@@ -103,7 +103,7 @@
 			
 	    $xmldoc->save("words.xml");
 		
-		echo "<a href='main.php' >返回继续</a>	";
+		echo "<a href='index.php' >返回继续</a>	";
 	}
 	else if ($type=="update")
 	{
@@ -113,7 +113,7 @@
 		if (!($up_en&&$up_cn))
 		{
      		echo "请输入要更新的英文单词和对应的中文!<br/>";
-			echo "<a href='main.php' >返回继续</a>	";
+			echo "<a href='index.php' >返回继续</a>	";
 			exit();
 		} 
         $node_all = $xmldoc->getElementsByTagName("en");		
@@ -138,7 +138,7 @@
 			
 	    $xmldoc->save("words.xml");
 		
-		echo "<a href='main.php' >返回继续</a>	";
+		echo "<a href='index.php' >返回继续</a>	";
 	}
 
 
